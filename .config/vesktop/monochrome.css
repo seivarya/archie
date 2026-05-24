@@ -1,0 +1,207 @@
+/**
+ * @name system24::monochrome
+ * @description a tui-style discord theme.
+ * @author refact0r
+ * @theme by @seivarya
+
+ /* import theme modules */
+ @import url('https://refact0r.github.io/system24/build/system24.css');
+
+ /* usage: just CTRL + C & V it into css editor in vesktop */
+
+ body {
+	 font-weight: 300;
+	 letter-spacing: -0.05ch;
+
+	 /* sizes */
+	 --gap: 12px;
+	 --divider-thickness: 4px;
+	 --border-thickness: 2px;
+	 --border-hover-transition: 0.2s ease;
+
+	 /* animation/transition options */
+	 --animations: on;
+	 --list-item-transition: 0.2s ease;
+	 --dms-icon-svg-transition: 0.4s ease;
+
+	 /* top bar options */
+	 --top-bar-height: var(--gap);
+	 --top-bar-button-position: titlebar;
+	 --top-bar-title-position: off;
+	 --subtle-top-bar-title: off;
+
+	 /* window controls */
+	 --custom-window-controls: off;
+	 --window-control-size: 14px;
+
+	 /* dms button options */
+	 --custom-dms-icon: off;
+	 --dms-icon-svg-url: url('');
+	 --dms-icon-svg-size: 90%;
+	 --dms-icon-color-before: var(--icon-subtle);
+	 --dms-icon-color-after: var(--white);
+
+	 --custom-dms-background: color;
+	 --dms-background-image-url: url('');
+	 --dms-background-image-size: cover;
+
+	 --dms-background-color:
+	 linear-gradient(
+	 135deg,
+	 oklch(16% 0 0),
+	 oklch(22% 0 0),
+	 oklch(10% 0 0)
+	 );
+
+	 /* background image options */
+	 --background-image: off;
+	 --background-image-url: url('');
+
+	 /* transparency/blur options */
+	 --transparency-tweaks: off;
+	 --remove-bg-layer: off;
+	 --panel-blur: off;
+	 --blur-amount: 12px;
+	 --bg-floating: var(--bg-3);
+
+	 /* other options */
+	 --small-user-panel: on;
+
+	 /* unrounding options */
+	 --unrounding: on;
+
+	 /* styling options */
+	 --custom-spotify-bar: on;
+	 --ascii-titles: on;
+	 --ascii-loader: system24;
+
+	 /* panel labels */
+	 --panel-labels: on;
+	 --label-color: var(--text-5);
+	 --label-font-weight: 500;
+ }
+
+ /* color options */
+ :root {
+	 --colors: on;
+
+	 /* monochrome palette */
+	 --white: oklch(100% 0 0);
+
+	 --gray-1: oklch(94% 0 0);
+	 --gray-2: oklch(84% 0 0);
+	 --gray-3: oklch(72% 0 0);
+	 --gray-4: oklch(58% 0 0);
+	 --gray-5: oklch(42% 0 0);
+	 --gray-6: oklch(28% 0 0);
+	 --gray-7: oklch(18% 0 0);
+
+	 --black: oklch(8% 0 0);
+
+	 /* text colors */
+	 --text-0: var(--black);
+	 --text-1: var(--white);
+	 --text-2: var(--gray-1);
+	 --text-3: var(--gray-2);
+	 --text-4: var(--gray-3);
+	 --text-5: var(--gray-4);
+
+	 /* background and dark colors */
+	 --bg-1: oklch(28% 0 0);
+	 --bg-2: oklch(22% 0 0);
+	 --bg-3: oklch(16% 0 0);
+	 --bg-4: oklch(10% 0 0);
+
+	 --hover: oklch(90% 0 0 / 0.06);
+	 --active: oklch(90% 0 0 / 0.12);
+	 --active-2: oklch(90% 0 0 / 0.18);
+
+	 --message-hover: var(--hover);
+
+	 /* accent colors */
+	 --accent-1: var(--gray-1);
+	 --accent-2: var(--gray-2);
+	 --accent-3: var(--gray-3);
+	 --accent-4: var(--gray-4);
+	 --accent-5: var(--gray-5);
+
+	 --accent-new: var(--gray-2);
+
+	 --mention:
+	 linear-gradient(
+	 to right,
+	 color-mix(in hsl, var(--accent-2), transparent 88%) 40%,
+	 transparent
+	 );
+
+	 --mention-hover:
+	 linear-gradient(
+	 to right,
+	 color-mix(in hsl, var(--accent-2), transparent 94%) 40%,
+	 transparent
+	 );
+
+	 --reply:
+	 linear-gradient(
+	 to right,
+	 color-mix(in hsl, var(--text-3), transparent 88%) 40%,
+	 transparent
+	 );
+
+	 --reply-hover:
+	 linear-gradient(
+	 to right,
+	 color-mix(in hsl, var(--text-3), transparent 94%) 40%,
+	 transparent
+	 );
+
+	 /* status indicator colors */
+	 --online: var(--gray-2);
+	 --dnd: var(--gray-5);
+	 --idle: var(--gray-3);
+	 --streaming: var(--gray-1);
+	 --offline: var(--gray-5);
+
+	 /* border colors */
+	 --border-light: var(--hover);
+	 --border: var(--active);
+	 --border-hover: var(--gray-2);
+
+	 --button-border: oklch(100% 0 0 / 0.08);
+
+	 /* base grayscale mappings conf */
+	 --red-1: var(--gray-1);
+	 --red-2: var(--gray-2);
+	 --red-3: var(--gray-3);
+	 --red-4: var(--gray-4);
+	 --red-5: var(--gray-5);
+
+	 --green-1: var(--gray-1);
+	 --green-2: var(--gray-2);
+	 --green-3: var(--gray-3);
+	 --green-4: var(--gray-4);
+	 --green-5: var(--gray-5);
+
+	 --blue-1: var(--gray-1);
+	 --blue-2: var(--gray-2);
+	 --blue-3: var(--gray-3);
+	 --blue-4: var(--gray-4);
+	 --blue-5: var(--gray-5);
+
+	 --yellow-1: var(--gray-1);
+	 --yellow-2: var(--gray-2);
+	 --yellow-3: var(--gray-3);
+	 --yellow-4: var(--gray-4);
+	 --yellow-5: var(--gray-5);
+
+	 --purple-1: var(--gray-1);
+	 --purple-2: var(--gray-2);
+	 --purple-3: var(--gray-3);
+	 --purple-4: var(--gray-4);
+	 --purple-5: var(--gray-5);
+ }
+
+* {
+	/* change the font family to whatever you want */
+	font-family: SauceCodePro NFM !important;
+}
