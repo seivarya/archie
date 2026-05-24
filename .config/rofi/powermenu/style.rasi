@@ -1,0 +1,238 @@
+
+/*****----- configuration -----*****/
+configuration {
+    show-icons: false;
+}
+
+/*****----- global properties -----*****/
+@import "~/.config/rofi/colors/monochrome.rasi"
+
+* {
+    font: "SauceCodePro NFM 10";
+}
+
+/*
+use_buttons=yes
+*/
+
+/*****----- main window -----*****/
+window {
+    transparency: "real";
+
+    location: center;
+    anchor: center;
+
+    fullscreen: false;
+
+    width: 620px;
+
+    x-offset: 0px;
+    y-offset: 0px;
+
+    enabled: true;
+
+    margin: 0px;
+    padding: 0px;
+
+    border: 0px solid;
+
+    border-radius: 20px;
+    border-color: @selected;
+
+    cursor: "default";
+
+    background-color: @background;
+}
+
+/*****----- main box -----*****/
+mainbox {
+    enabled: true;
+
+    spacing: 15px;
+
+    margin: 0px;
+    padding: 26px;
+
+    border: 0px solid;
+
+    border-radius: 0px;
+    border-color: @selected;
+
+    background-color: transparent;
+
+    children: [ "inputbar", "listview" ];
+}
+
+/*****----- inputbar -----*****/
+inputbar {
+    enabled: true;
+
+    spacing: 15px;
+
+    margin: 0px;
+    padding: 0px;
+
+    border: 0px;
+
+    border-radius: 0px;
+    border-color: @selected;
+
+    background-color: transparent;
+
+    text-color: @foreground;
+
+    children: [ "textbox-prompt-colon", "prompt" ];
+}
+
+/*****----- dummy -----*****/
+dummy {
+    background-color: transparent;
+}
+
+/*****----- prompt icon -----*****/
+textbox-prompt-colon {
+    enabled: true;
+
+    expand: false;
+
+    str: "";
+
+    padding: 12px 16px;
+
+    border-radius: 100%;
+
+    background-color: @urgent;
+    text-color: @background;
+}
+
+/*****----- prompt -----*****/
+prompt {
+    enabled: true;
+
+    padding: 12px 18px;
+
+    border-radius: 100%;
+
+    background-color: @active;
+    text-color: @background;
+}
+
+/*****----- message -----*****/
+message {
+    enabled: true;
+
+    margin: 0px;
+
+    padding: 12px;
+
+    border: 0px solid;
+
+    border-radius: 100%;
+    border-color: @selected;
+
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+/*****----- generic textbox -----*****/
+textbox {
+    background-color: inherit;
+    text-color: inherit;
+
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+
+    placeholder-color: @foreground;
+
+    blink: true;
+    markup: true;
+}
+
+/*****----- error message -----*****/
+error-message {
+    padding: 12px;
+
+    border: 0px solid;
+
+    border-radius: 0px;
+    border-color: @selected;
+
+    background-color: @background;
+    text-color: @foreground;
+}
+
+/*****----- listview -----*****/
+listview {
+    enabled: true;
+
+    columns: 5;
+    lines: 1;
+
+    cycle: true;
+    dynamic: true;
+
+    scrollbar: false;
+
+    layout: vertical;
+    reverse: false;
+
+    fixed-height: true;
+    fixed-columns: true;
+
+    spacing: 15px;
+
+    margin: 0px;
+    padding: 0px;
+
+    border: 0px solid;
+
+    border-radius: 0px;
+    border-color: @selected;
+
+    background-color: transparent;
+
+    text-color: @foreground;
+
+    cursor: "default";
+}
+
+/*****----- elements -----*****/
+element {
+    enabled: true;
+
+    spacing: 0px;
+
+    margin: 0px;
+
+    padding: 32px 10px;
+
+    border: 0px solid;
+
+    border-radius: 100%;
+    border-color: @selected;
+
+    background-color: @background-alt;
+    text-color: @foreground;
+
+    cursor: pointer;
+}
+
+/*****----- element text -----*****/
+element-text {
+    background-color: transparent;
+
+    text-color: inherit;
+
+    cursor: inherit;
+
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+
+    font: "SauceCodePro NFM 24";
+}
+
+/*****----- selected element -----*****/
+element selected.normal {
+    background-color: var(selected);
+    text-color: var(background);
+}

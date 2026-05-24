@@ -1,0 +1,134 @@
+/* rofi configuration */
+
+configuration {
+
+    /* general */
+    modi: "drun,run,filebrowser,window";
+
+    case-sensitive: false;
+    cycle: true;
+    filter: "";
+
+    scroll-method: 0;
+    normalize-match: true;
+
+    show-icons: true;
+    icon-theme: "Papirus";
+
+    steal-focus: false;
+
+    /* matching */
+    matching: "normal";
+    tokenize: true;
+
+    /* ssh */
+    ssh-client: "ssh";
+    ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";
+
+    parse-hosts: true;
+    parse-known-hosts: true;
+
+    /* drun */
+    drun-categories: "";
+
+    drun-match-fields: "name,generic,exec,categories,keywords";
+
+    drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+
+    drun-show-actions: false;
+
+    drun-url-launcher: "xdg-open";
+
+    drun-use-desktop-cache: false;
+    drun-reload-desktop-cache: false;
+
+    drun {
+        parse-user: true;
+        parse-system: true;
+    }
+
+    /* run */
+    run-command: "{cmd}";
+    run-list-command: "";
+    run-shell-command: "{terminal} -e {cmd}";
+
+    /* fallback icons */
+    run,drun {
+        fallback-icon: "application-x-addon";
+    }
+
+    /* window switcher */
+    window-match-fields: "title,class";
+
+    window-command: "wmctrl -i -R {window}";
+
+    window-format: "{w} - {c} - {t:0}";
+
+    window-thumbnail: false;
+
+    /* history & sorting */
+    disable-history: false;
+
+    sorting-method: "normal";
+
+    max-history-size: 25;
+
+    sort: false;
+
+    /* display */
+    display-window: "Windows";
+    display-windowcd: "Window CD";
+
+    display-run: "Run";
+    display-ssh: "SSH";
+
+    display-drun: "Apps";
+
+    display-combi: "Combi";
+    display-keys: "Keys";
+
+    display-filebrowser: "Files";
+
+    terminal: "rofi-sensible-terminal";
+
+    font: "SauceCodePro NFM 11";
+
+    threads: 0;
+
+    click-to-exit: true;
+
+    /* file browser */
+    filebrowser {
+        directories-first: true;
+        sorting-method: "name";
+    }
+
+    /* timeout */
+    timeout {
+        action: "kb-cancel";
+        delay: 0;
+    }
+
+    /* keybindings */
+    kb-accept-entry: "Return,KP_Enter";
+
+    kb-cancel: "Escape";
+
+    kb-remove-char-back: "BackSpace";
+
+    kb-row-down: "Down,Control+n";
+    kb-row-up: "Up,Control+p";
+
+    kb-page-next: "Page_Down";
+    kb-page-prev: "Page_Up";
+
+    kb-move-char-back: "Left";
+    kb-move-char-forward: "Right";
+
+    kb-mode-next: "Control+Tab";
+    kb-mode-previous: "Control+Shift+Tab";
+}
+
+/* theme */
+@theme "~/.config/rofi/launchers/style.rasi"
+

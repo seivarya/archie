@@ -1,0 +1,248 @@
+configuration {
+    modi: "drun,run,filebrowser,window";
+
+    show-icons: true;
+
+    display-drun: "";
+    display-run: "";
+    display-filebrowser: "";
+    display-window: "";
+
+    drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+}
+
+@import "~/.config/rofi/colors/monochrome.rasi"
+
+* {
+    font: "SauceCodePro NFM 10";
+}
+
+window {
+    enabled: true;
+
+    transparency: "real";
+
+    location: center;
+    anchor: center;
+
+    fullscreen: false;
+
+    width: 520px;
+
+    x-offset: 0px;
+    y-offset: 0px;
+
+    border: 2px;
+    border-color: @selected;
+
+    border-radius: 22px;
+
+    cursor: "default";
+
+    background-color: @background;
+}
+
+mainbox {
+    enabled: true;
+
+    spacing: 0px;
+
+    orientation: vertical;
+
+    background-color: transparent;
+
+    children: [ "inputbar", "listbox" ];
+}
+
+/*****----- input bar -----*****/
+inputbar {
+    enabled: true;
+
+    spacing: 12px;
+
+    padding: 22px;
+
+    orientation: horizontal;
+
+    background-color: transparent;
+    text-color: @foreground;
+
+    children: [ "textbox-prompt-colon", "entry" ];
+}
+
+/*****----- search icon -----*****/
+textbox-prompt-colon {
+    enabled: false;
+    expand: false;
+    str: "";
+    padding: 0px;
+    border-radius: 0px;
+    background-color: @background;
+    text-color: @foreground;
+}
+
+/*****----- entry -----*****/
+entry {
+    enabled: true;
+    expand: true;
+
+    padding: 12px 16px;
+
+    border-radius: 14px;
+
+    background-color: @background-alt;
+    text-color: @foreground;
+
+    cursor: text;
+
+    placeholder: "search";
+    placeholder-color: @foreground;
+}
+
+/*****----- list box -----*****/
+listbox {
+    spacing: 16px;
+
+    padding: 0px 22px 22px 22px;
+
+    orientation: vertical;
+
+    background-color: transparent;
+
+    children: [ "listview", "mode-switcher" ];
+}
+
+/*****----- list view -----*****/
+listview {
+    enabled: true;
+
+    columns: 1;
+    lines: 5;
+
+    cycle: true;
+    dynamic: true;
+
+    scrollbar: false;
+
+    layout: vertical;
+
+    spacing: 10px;
+
+    background-color: transparent;
+
+    cursor: "default";
+}
+
+/*****----- elements -----*****/
+element {
+    enabled: true;
+
+    spacing: 14px;
+
+    padding: 12px 14px;
+
+    border-radius: 14px;
+
+    background-color: transparent;
+    text-color: @foreground;
+
+    cursor: pointer;
+}
+
+/*****----- element states -----*****/
+element normal.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element normal.urgent {
+    background-color: @urgent;
+    text-color: @background;
+}
+
+element normal.active {
+    background-color: @active;
+    text-color: @background;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @background;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @background;
+}
+
+element selected.active {
+    background-color: @active;
+    text-color: @background;
+}
+
+/*****----- element icon -----*****/
+element-icon {
+    size: 28px;
+
+    background-color: transparent;
+    text-color: inherit;
+
+    cursor: inherit;
+}
+
+/*****----- element text -----*****/
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+
+    cursor: inherit;
+
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+/*****----- mode switcher -----*****/
+mode-switcher {
+    enabled: true;
+
+    spacing: 12px;
+
+    background-color: transparent;
+
+    text-color: @foreground;
+}
+
+/*****----- buttons -----*****/
+button {
+    font: "SauceCodePro NFM 13";
+
+    padding: 12px 18px;
+
+    border-radius: 14px;
+
+    background-color: @background-alt;
+    text-color: @foreground;
+
+    cursor: pointer;
+}
+
+button selected {
+    background-color: @selected;
+    text-color: @background;
+}
+
+/*****----- message -----*****/
+message {
+    enabled: false;
+}
+
+/*****----- error message -----*****/
+error-message {
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background-color: @background-alt;
+    text-color: @foreground;
+}

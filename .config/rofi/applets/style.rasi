@@ -1,0 +1,204 @@
+/*****----- configuration -----*****/
+configuration {
+    show-icons: false;
+    text-color: #FFFFFF;
+}
+
+/*****----- don't remove this -----*****/
+
+// use_icon=no
+
+/*****----- global properties -----*****/
+@import "~/.config/rofi/colors/monochrome.rasi"
+
+* {
+    font: "SauceCodePro NFM 10";
+}
+
+
+/*****----- main window -----*****/
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 400px;
+    x-offset: 0px;
+    y-offset: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid;
+    border-radius: 18px;
+    border-color: @selected;
+    cursor: "default";
+    background-color: @background;
+}
+
+/*****----- main box -----*****/
+mainbox {
+    enabled: true;
+    spacing: 10px;
+    margin: 0px;
+    padding: 20px;
+    background-color: transparent;
+    children: [ "inputbar", "message", "listview" ];
+}
+
+/*****----- inputbar -----*****/
+inputbar {
+    enabled: true;
+
+    spacing: 10px;
+
+    padding: 0px;
+
+    border: 0px;
+
+    border-radius: 14px;
+
+    border-color: @selected;
+
+    background-color: transparent;
+
+    text-color: @foreground;
+
+    children: [ "textbox-prompt-colon", "prompt" ];
+}
+
+/*****----- prompt icon -----*****/
+textbox-prompt-colon {
+    enabled: true;
+
+    expand: false;
+
+    str: "";
+
+    padding: 10px 13px;
+
+    border-radius: 14px;
+
+    background-color: @urgent;
+
+    text-color: @background;
+}
+
+/*****----- prompt -----*****/
+prompt {
+    enabled: true;
+
+    padding: 10px;
+
+    border-radius: 14px;
+
+    background-color: @active;
+
+    text-color: @background;
+}
+
+/*****----- message -----*****/
+message {
+    enabled: true;
+
+    margin: 0px;
+
+    padding: 10px;
+
+    border: 0px solid;
+
+    border-radius: 14px;
+
+    border-color: @selected;
+
+    background-color: @background-alt;
+
+    text-color: @foreground;
+}
+
+/*****----- generic textbox -----*****/
+textbox {
+    background-color: inherit;
+
+    text-color: inherit;
+
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+/*****----- listview -----*****/
+listview {
+    enabled: true;
+
+    columns: 1;
+    lines: 6;
+
+    cycle: true;
+
+    scrollbar: false;
+
+    layout: vertical;
+
+    spacing: 5px;
+
+    background-color: transparent;
+
+    cursor: "default";
+}
+
+/*****----- elements -----*****/
+element {
+    enabled: true;
+
+    padding: 10px;
+
+    border: 0px solid;
+
+    border-radius: 12px;
+
+    border-color: @selected;
+
+    background-color: transparent;
+
+    text-color: @foreground;
+
+    cursor: pointer;
+}
+
+/*****----- element text -----*****/
+element-text {
+    background-color: transparent;
+
+    text-color: inherit;
+    cursor: inherit;
+
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+/*****----- element states -----*****/
+element normal.normal,
+element alternate.normal {
+    background-color: var(background);
+
+    text-color: var(foreground);
+}
+
+element normal.urgent,
+element alternate.urgent,
+element selected.active {
+    background-color: var(urgent);
+
+    text-color: var(background);
+}
+
+element normal.active,
+element alternate.active,
+element selected.urgent {
+    background-color: var(active);
+
+    text-color: var(background);
+}
+
+element selected.normal {
+    background-color: var(selected);
+    text-color: var(urgent);
+}

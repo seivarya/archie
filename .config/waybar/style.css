@@ -1,0 +1,152 @@
+/* monochrome variables */
+@define-color background rgba(15, 15, 15, 0.95);
+@define-color foreground #ffffff;
+@define-color foreground_dim #888888;
+@define-color active_tab_background #222222;
+@define-color selected_bg rgba(255, 255, 255, 0.1);
+@define-color border_color rgba(255, 255, 255, 0.08);
+
+* {
+	min-height: 0;
+
+	font-family: "SauceCodePro NFM", monospace;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+#waybar {
+	background-color: transparent;
+}
+
+#waybar .module {
+	color: @foreground;
+
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* hollow segmented groups styling */
+#hollow-left-1,
+#hollow-left-2,
+#hollow-center-1,
+#hollow-right-1,
+#hollow-right-4,
+#hollow-right-5 {
+	background: @background;
+
+	border: 1px solid @border_color;
+	border-radius: 10px;
+
+	padding: 3px 12px;
+
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+	margin: 0px 0px;
+}
+
+/* module alignment & spacing */
+#battery,
+#wireplumber,
+#network,
+#custom-power,
+#custom-spotify,
+#cpu,
+#memory,
+#temperature,
+#clock,
+#idle_inhibitor,
+#custom-waybar-rofi {
+	padding: 0px 8px;
+	margin: 0px;
+}
+
+/* important icons */
+#network,
+#wireplumber,
+#battery,
+#custom-power,
+#custom-waybar-rofi {
+	font-size: 20px;
+}
+
+/* module hover effects */
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#clock:hover,
+#battery:hover,
+#wireplumber:hover,
+#custom-spotify:hover,
+#network:hover,
+#custom-power:hover,
+#custom-waybar-rofi:hover {
+	color: @foreground;
+
+	background: @selected_bg;
+
+	border-radius: 6px;
+}
+
+/* workspaces indicator */
+#workspaces {
+	padding: 1px;
+}
+
+#workspaces button {
+	box-shadow: none;
+	text-shadow: none;
+
+	padding: 0px 8px;
+
+	border-radius: 8px;
+
+	margin: 2px 0px;
+
+	color: @foreground_dim;
+
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button.active {
+	background: @foreground;
+
+	color: @background;
+
+	border-radius: 8px;
+
+	padding: 0px 12px;
+
+	font-weight: bold;
+}
+
+#workspaces button:hover {
+	background: @selected_bg;
+
+	color: @foreground;
+}
+
+/* power module */
+#custom-power {
+	color: #ff5555;
+
+	padding: 0px 8px 0px 10px;
+}
+
+#custom-power:hover {
+	color: #ff3333;
+
+	background: rgba(255, 85, 85, 0.1);
+}
+
+#custom-waybar-rofi {
+	color: #bd93f9;
+}
+
+#custom-waybar-rofi:hover {
+	color: #ff79c6;
+
+	background: rgba(189, 147, 249, 0.1);
+}
+
+#tray {
+	padding: 0px 4px;
+}

@@ -1,0 +1,22 @@
+{
+  "include": [
+    "~/.config/waybar/modules/battery.jsonc",
+    "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/htb-vpn.jsonc",
+    "~/.config/waybar/modules/mpris.jsonc",
+    "~/.config/waybar/modules/network.jsonc",
+    "~/.config/waybar/modules/pacman.jsonc",
+    "~/.config/waybar/modules/pkg-aur.jsonc",
+    "~/.config/waybar/modules/power.jsonc",
+    "~/.config/waybar/modules/spotify.jsonc",
+    "~/.config/waybar/modules/spotify-next.jsonc",
+    "~/.config/waybar/modules/spotify-pause.jsonc",
+    "~/.config/waybar/modules/spotify-prev.jsonc",
+    "~/.config/waybar/modules/target.jsonc",
+    "~/.config/waybar/modules/tray.jsonc",
+    "~/.config/waybar/modules/waybar-rofi.jsonc",
+    "~/.config/waybar/modules/user.jsonc",
+    "~/.config/waybar/modules/wirepumbler.jsonc",
+    "~/.config/waybar/modules/workspaces.jsonc"
+  ]
+}

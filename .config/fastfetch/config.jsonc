@@ -1,0 +1,126 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+	"logo": {
+		"type": "kitty",
+		"source": "~/.config/fastfetch/assets/archie.png",
+		"height": 12,
+		"padding": {
+			"top": 1,
+			"left": 2
+		}
+	},
+	"display": {
+		"color": "white"
+	},
+	"modules": [
+		{
+			"type": "title",
+			"format": "   ",
+			"keyColor": "white",
+			"color": "white"
+		},
+
+		{
+			"type": "title",
+			"key": "    User",
+			"keyColor": "white",
+			"format": "{1}@{2}",
+			"color": "white"
+		},
+		{
+			"type": "os",
+			"key": "   󰣇 OS",
+			"keyColor": "white",
+			"format": "{2}",
+			"color": "white"
+		},
+		{
+			"type": "   kernel",
+			"key": "    Kernel",
+			"keyColor": "white",
+			"format": "{2}",
+			"color": "white"
+		},
+		{
+			"type": "packages",
+			"key": "   󰏗 Packages",
+			"keyColor": "white",
+			"color": "white"
+		},
+		{
+			"type": "cpu",
+			"key": "    CPU",
+			"keyColor": "white",
+			"format": "{1} ({3}) @ {7}",
+			"color": "white"
+		},
+		{
+			"type": "gpu",
+			"key": "   󰊴 GPU",
+			"keyColor": "white",
+			"format": "{1} {2}",
+			"color": "white"
+		},
+		{
+			"type": "memory",
+			"key": "   󰍛 Memory",
+			"keyColor": "white",
+			"format": "{1} / {2} ({3})",
+			"color": "white"
+		},
+		{
+			"type": "custom"
+		},
+		{
+			"type": "custom"
+		},
+		{
+			"type": "display",
+			"key": "   󰍹 Display",
+			"keyColor": "white",
+			"format": "{1}x{2} @ {3}Hz ({7})",
+			"color": "white"
+		},
+		{
+			"type": "wm",
+			"key": "   󱗃 WM",
+			"keyColor": "white",
+			"format": "{2}",
+			"color": "white"
+		},
+		{
+			"type": "terminal",
+			"key": "    Terminal",
+			"keyColor": "white",
+			"format": "{2}",
+			"color": "white"
+		},
+		{
+			"type": "uptime",
+			"key": "   󰅐 Uptime",
+			"keyColor": "white",
+			"color": "white"
+		},
+		{
+			"type": "disk",
+			"key": "   OS Age",
+			"keyColor": "white",
+			"format": "{days} days",
+			"folders": "/",
+			"color": "white"
+		},
+		{
+			"type": "disk",
+			"key": "   󱦟 Disk",
+			"keyColor": "white",
+			"format": "{1} / {2} ({3})",
+			"folders": "/",
+			"color": "white"
+		},
+		{
+			"type": "custom"
+		},
+		"break"
+	]
+}

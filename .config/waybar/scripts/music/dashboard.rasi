@@ -1,0 +1,105 @@
+/**
+ * Rofi Spotify Dashboard Theme
+ * Location: ~/.config/waybar/scripts/music/dashboard.rasi
+ **/
+
+* {
+    bg:           #000000;
+    bg-alt:       #222222;
+
+    fg:           #BBBBBB;
+    white:        #FFFFFF;
+
+    selected:     #3A3A3A;
+
+    border:       #333333;
+}
+
+/*****----- Window -----*****/
+window {
+    width:                    280px;
+
+    border:                   1px;
+    border-color:             @border;
+
+    border-radius:            16px;
+
+    background-color:         @bg;
+}
+
+/*****----- Main Container -----*****/
+mainbox {
+    children:                 [ message, listview ];
+
+    spacing:                  12px;
+
+    padding:                  16px;
+
+    background-color:         @bg;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:         transparent;
+
+    text-color:               #888888;
+
+    padding:                  0px;
+}
+
+/*****----- Textbox -----*****/
+textbox {
+    background-color:         transparent;
+
+    text-color:               @white;
+
+    horizontal-align:         0.5;
+    vertical-align:           0.5;
+}
+
+/*****----- List View -----*****/
+listview {
+    lines:                    1;
+
+    spacing:                  16px;
+
+    fixed-height:             false;
+    fixed-columns:            true;
+
+    scrollbar:                false;
+
+    background-color:         transparent;
+}
+
+/*****----- Elements -----*****/
+element {
+    children:                 [ element-text ];
+
+    background-color:         @bg-alt;
+
+    text-color:               @fg;
+
+    border-radius:            12px;
+
+    padding:                  8px 0px;
+
+    margin:                   0px 2px;
+}
+
+/*****----- Selected / Hover -----*****/
+
+
+/*****----- Element Text -----*****/
+element-text {
+    background-color:         transparent;
+
+    text-color:               inherit;
+
+    horizontal-align:         0.5;
+    vertical-align:           0.5;
+}
+
+/*****----- Scrollbar -----*****/
+scrollbar {
+    enabled:                  false;
+}

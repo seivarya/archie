@@ -1,0 +1,10 @@
+{
+  "custom/spotify": {
+    "format": "{}",
+    "return-type": "json",
+    "markup": true,
+    "exec": "lua /home/seivarya/.config/waybar/scripts/music/dashboard.lua",
+    "on-click": "lua /home/seivarya/.config/waybar/scripts/music/dashboard.lua --dashboard",
+    "interval": 1
+  }
+}
