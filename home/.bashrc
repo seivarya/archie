@@ -48,3 +48,8 @@ alias ...='cd ../..'
 
 alias venv='python3 -m venv .venv && source .venv/bin/activate'
 
+# [ custom ]
+
+clone() {
+	git clone "https://github.com/$1"
+}

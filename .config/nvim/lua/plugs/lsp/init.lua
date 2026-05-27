@@ -7,6 +7,25 @@ return {
 
 		},
 		config = function()
+			vim.lsp.config("angularls", {
+				cmd = {
+					"ngserver",
+					"--stdio",
+					"--tsProbeLocations", vim.fn.expand("~/prjcts/temp/node_modules"),
+					"--ngProbeLocations", vim.fn.expand("~/prjcts/temp/node_modules"),
+				},
+				filetypes = {
+					"typescript",
+					"html",
+					"htmlangular",
+				},
+				root_markers = {
+					"angular.json",
+					"nx.json",
+					"project.json",
+				},
+			})
+
 			local cmp_lsp = require("cmp_nvim_lsp")
 
 			--[[ on-attach callback ]]
