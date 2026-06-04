@@ -38,6 +38,7 @@ alias win='hyprctl clients'
 alias reboot='sudo reboot'
 alias shutdown='sudo shutdown now'
 alias nv='nvim'
+alias tmx='tmux new-session'
 
 # [ navigation ]
 
@@ -53,3 +54,4 @@ alias venv='python3 -m venv .venv && source .venv/bin/activate'
 clone() {
 	git clone "https://github.com/$1"
 }
+. "$HOME/.cargo/env"
