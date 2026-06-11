@@ -103,22 +103,6 @@
 			"color": "white"
 		},
 		{
-			"type": "disk",
-			"key": "   OS Age",
-			"keyColor": "white",
-			"format": "{days} days",
-			"folders": "/",
-			"color": "white"
-		},
-		{
-			"type": "disk",
-			"key": "   󱦟 Disk",
-			"keyColor": "white",
-			"format": "{1} / {2} ({3})",
-			"folders": "/",
-			"color": "white"
-		},
-		{
 			"type": "custom"
 		},
 		"break"

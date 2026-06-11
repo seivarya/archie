@@ -165,6 +165,8 @@ hl.bind(
 	})
 )
 
+--[[ snap back scratchpad ]]
+
 --[[ scroll workspaces ]]
 hl.bind(
 	mainMod .. " + mouse_down",

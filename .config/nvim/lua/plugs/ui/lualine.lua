@@ -7,21 +7,21 @@ return {
 		config = function()
 			local mono = {
 				-- sexy monochrome palette
-				-- black       = "#0a0a0a",
-				-- bg          = "#111111",
-				-- bg_dark     = "#161616",
-				-- bg_soft     = "#1d1d1d",
-				-- bg_light    = "#262626",
-				--
-				-- gray_1      = "#3a3a3a",
-				-- gray_2      = "#525252",
-				-- gray_3      = "#737373",
-				--
-				-- white       = "#f5f5f5",
-				-- text        = "#d4d4d4",
-				-- subtext     = "#a1a1a1",
-				--
-				-- border      = "#2a2a2a",
+				black       = "#0a0a0a",
+				bg          = "#111111",
+				bg_dark     = "#161616",
+				bg_soft     = "#1d1d1d",
+				bg_light    = "#262626",
+
+				gray_1      = "#3a3a3a",
+				gray_2      = "#525252",
+				gray_3      = "#737373",
+
+				white       = "#f5f5f5",
+				text        = "#d4d4d4",
+				subtext     = "#a1a1a1",
+
+				border      = "#2a2a2a",
 			}
 
 			local custom_theme = {
@@ -134,7 +134,7 @@ return {
 
 			require('lualine').setup({
 				options = {
-					theme = "tokyonight",
+					theme = custom_theme,
 
 					component_separators = '',
 					section_separators = {
